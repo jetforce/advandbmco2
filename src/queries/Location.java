@@ -80,7 +80,6 @@ public class Location extends javax.swing.JPanel {
         zone = new javax.swing.JRadioButton();
         brgy = new javax.swing.JRadioButton();
         purok = new javax.swing.JRadioButton();
-        jButton1 = new javax.swing.JButton();
         province = new javax.swing.JRadioButton();
 
         jLabel1.setText("Location Level    ");
@@ -97,13 +96,6 @@ public class Location extends javax.swing.JPanel {
         locations.add(purok);
         purok.setText("Purok");
 
-        jButton1.setText("jButton1");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
         locations.add(province);
         province.setText("Province");
 
@@ -119,8 +111,7 @@ public class Location extends javax.swing.JPanel {
                     .addComponent(brgy)
                     .addComponent(zone)
                     .addComponent(mun)
-                    .addComponent(jLabel1)
-                    .addComponent(jButton1))
+                    .addComponent(jLabel1))
                 .addContainerGap(30, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -138,27 +129,13 @@ public class Location extends javax.swing.JPanel {
                 .addComponent(brgy)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(purok)
-                .addGap(46, 46, 46)
-                .addComponent(jButton1)
-                .addContainerGap(59, Short.MAX_VALUE))
+                .addContainerGap(49, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        
-        ArrayList<String> s = getLocations();
-        
-        for(String l : s){
-            System.out.println(l);
-        }
-        
-    }//GEN-LAST:event_jButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JRadioButton brgy;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.ButtonGroup locations;
     private javax.swing.JRadioButton mun;

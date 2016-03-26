@@ -29,7 +29,7 @@ public class Income extends javax.swing.JPanel {
         this.model.addElement(new Range(0,20000));
         avg.setSelected(true);
     }
-
+    
     public Range[] getRanges(){
         
         int range = model.getSize();
