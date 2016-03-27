@@ -6,8 +6,12 @@
 package queries;
 
 import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Enumeration;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.AbstractButton;
 import javax.swing.ButtonGroup;
 
@@ -93,7 +97,7 @@ public class place_person_income_query implements Query{
     
     public String makeQuery(){
         String init = "select "+  getSelect() +"age_group, SUM(wagcshm + wagkndm)  \n" +
-                        "from `data` as d, \n" +
+                        "from `survey` as d, \n" +
                         "(select person_id ,sex,\n" +
                         "	(CASE\n" +
                                 getIncomeType()+
@@ -118,8 +122,19 @@ public class place_person_income_query implements Query{
         
         String q = makeQuery();
         System.out.println(q);
-        
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+          Statement s= null;
+       ResultSet rs = null;
+       String query;
+        try {
+            query = q;
+            s = Data.con.createStatement();
+            s.execute(query);
+            rs = s.getResultSet();
+            System.out.println(query);
+        } catch (SQLException ex) {
+            Logger.getLogger(Queries.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return rs;    
     }
     
     

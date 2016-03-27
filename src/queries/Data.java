@@ -30,7 +30,7 @@ public class Data {
 	Connection connection = null;
 
 	try {
-                 connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/"+"datawarehouse",user,password);
+                 connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/"+"combined",user,password);
                  //connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/"+"poverty",user,password);
                 //connection = DriverManager.getConnection("jdbc:mysql://localhost/?user="+user+"&password="+password);    
 	} catch (SQLException e) {

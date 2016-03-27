@@ -40,6 +40,10 @@ public class Queries {
        f.addPanel("Total Income individual/location", il3);
        query_set.add(new place_person_income_query(il3));
        
+       Education_Location il4 = new Education_Location();
+       f.addPanel("Age Education Location", il4);
+       query_set.add(new education_location_query(il4));
+           
   /*     
        //Hannah, Rigel add here your query statement and Query UI. dapat in order.
        QueryBox1 box1 = new QueryBox1();
