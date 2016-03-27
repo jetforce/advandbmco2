@@ -13,16 +13,19 @@ public class Range {
     
     public int small;
     public int big;
+    public String type;
     
-    public Range(int small,int big){
+    public Range(int small,int big,String type){
         this.small= small;
         this.big=big;
+        this.type = type;
     }
     
     @Override
     public String toString(){
-        return small+"<= Income <= "+ big;
+        return small+"<="+ this.type +"<= "+ big;
     }
+    
     
   
 }

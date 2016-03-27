@@ -29,12 +29,17 @@ public class Queries {
        Frame f = new Frame();
        
        Income_Location il = new Income_Location();
-       f.addPanel("Income/Location", il);
+       f.addPanel("Num of fam w/ Income/Location", il);
        query_set.add(new place_income_count_query(il));
        
        Income_Location il2 = new Income_Location();
        f.addPanel("Total Income/Location", il2);
        query_set.add(new place_total_income_query(il2));
+       
+       Person_Income_Location il3 = new Person_Income_Location();
+       f.addPanel("Total Income individual/location", il3);
+       query_set.add(new place_person_income_query(il3));
+       
   /*     
        //Hannah, Rigel add here your query statement and Query UI. dapat in order.
        QueryBox1 box1 = new QueryBox1();

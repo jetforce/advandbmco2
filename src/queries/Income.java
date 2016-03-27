@@ -26,7 +26,7 @@ public class Income extends javax.swing.JPanel {
         initComponents();
         model = new DefaultListModel();
         income_list.setModel(model);
-        this.model.addElement(new Range(0,20000));
+        this.model.addElement(new Range(0,20000,"Income"));
         avg.setSelected(true);
     }
     
@@ -148,8 +148,7 @@ public class Income extends javax.swing.JPanel {
         int bigger = Integer.parseInt(b);
         int smaller = Integer.parseInt(s);
         if(bigger>= smaller)
-            this.model.addElement(new Range(smaller,bigger));
-        
+            this.model.addElement(new Range(smaller,bigger,"Income"));
     }//GEN-LAST:event_jButton1ActionPerformed
 
 
